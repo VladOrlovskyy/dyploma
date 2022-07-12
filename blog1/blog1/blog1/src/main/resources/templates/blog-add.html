@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Блог сайту</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal">TRUNK LINE</h5>
+    <nav class="my-2 my-md-0 me-md-3">
+        <a class="p-2 text-dark" href="/">Головна</a>
+        <a class="p-2 text-dark" href="/blog/add">Розрахувати параметри ОВ</a>
+        <a class="p-2 text-dark" href="/feedback">Контакти</a>
+    </nav>
+</div>
+<center><h1>Розрахунок параметрів оптичного волокна</h1><br></center>
+<center><p><img src="https://vols.expert/wp-content/uploads/2020/07/9ab6fb40f62543958a39aa395d4d5c6a-1200x675.jpg"></center>
+<div class="container mt-5 mb-5">
+
+    <form action = "/blog/add" method="POST">
+
+        <p class="h5 my-0 me-md-auto fw-normal">Електронна пошта</p>
+        <input type="text" name="email" placeholder="Введіть свою електронну пошту" class="form-control"><br>
+
+        <p class="h5 my-0 me-md-auto fw-normal">Показник заломлення серцевини.</p>
+        <input type="number" name="ПоказникЗаломленняСерцевини" min="0.00" max="100.00"  placeholder="Введіть показник заломлення серцевини" class="form-control"><br>
+
+        <p class="h5 my-0 me-md-auto fw-normal">Показник заломлення оболонки.</p>
+        <input type="number" name="ПоказникЗаломленняОболонки" min="0.00" max="100.00"  placeholder="Введіть показник заломлення оболонки" class="form-control"><br>
+
+        <p class="h5 my-0 me-md-auto fw-normal">Довжина хвилі.</p>
+        <input type="number" name="ДовжинаХвилі" min="0.00" max="100.00"  placeholder="Введіть довжину хвилі" class="form-control"><br>
+
+        <p class="h5 my-0 me-md-auto fw-normal">Діаметр серцевини.</p>
+        <input type="number" name="ДіаметрСерцевини" min="0.00" max="100.00"  placeholder="Введіть діаметр серцевини" class="form-control"><br>
+
+        <button type="submit" class="btn btn-success">Обрахувати</button>
+
+    </form>
+
+
+</div>
+</body>
+</html>
+
